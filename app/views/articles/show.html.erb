@@ -1,0 +1,14 @@
+<div class="article-top d-flex justify-content-between">
+  <h2><%= @article.title %></h2>
+  <div class="actions">
+    <%= link_to "", article_path(@article),
+    method: :delete,
+    data: { confirm: "Are you sure?" }, class: "far fa-trash-alt pl-1" %>
+    <%= link_to "", edit_article_path(@article), class: "far fa-edit pl-1"  %>
+  </div>
+</div>
+
+<h4><%= @article.content %></h4>
+
+<p><%= link_to 'Back to list', articles_path  %></p>
+
